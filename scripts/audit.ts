@@ -18,7 +18,7 @@ if(!handoff)throw new Error('No completed handoff proof');
 if(handoff.events.filter(e=>e.sessionId).some(e=>e.sessionId!==handoff.result.sessionId))throw new Error('Handoff session changed');
 const raw=(await Promise.all(['.env','.env.credentials.local'].map(n=>fs.readFile(n,'utf8').catch(()=>'')))).join('\n');
 const secrets=[...raw.matchAll(/^(?:OPENAI_API_KEY|XAI_API_KEY)=(.+)$/gm)].map(m=>m[1].trim());
-async function scan(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){if(['.git','node_modules'].includes(entry.name)||entry.name==='.env'||entry.name.startsWith('.env.'))continue;const file=path.join(dir,entry.name);if(entry.isDirectory())await scan(file);else{const text=await fs.readFile(file,'utf8');if(secrets.some(secret=>secret&&text.includes(secret)))throw new Error('Secret found outside local configuration');}}}
+async function scan(dir){for(const entry of await fs.readdir(dir,{withFileTypes:true})){if(['.git','node_modules'].includes(entry.name)||entry.name==='.env'||entry.name.startsWith('.env.'))continue;const file=path.join(dir,entry.name);if(entry.isDirectory())await scan(file);else{const text=await fs.readFile(file,'utf8');if(/sk-(?:(?:proj|admin)-)?[A-Za-z0-9_-]{20,}|xai-[A-Za-z0-9_-]{20,}/.test(text)||secrets.some(secret=>secret&&text.includes(secret)))throw new Error('Secret found outside local configuration');}}}
 await scan(root);
 for(const name of await fs.readdir(evidence))if(name.endsWith('.json')||name.endsWith('.jsonl')){
  const text=await fs.readFile(path.join(evidence,name),'utf8');
