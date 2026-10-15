@@ -1,0 +1,5 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:09:21.159Z","mode":"replay","sessionId":"15531b95-4908-4ec8-85b7-3a835b6b76fc"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:09:21.160Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:09:21.160Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:09:21.160Z","stepId":"step-2","action":"click"}
+{"type":"business_outcome","sequence":5,"time":"2026-10-15T01:09:21.160Z","code":"member_not_found"}

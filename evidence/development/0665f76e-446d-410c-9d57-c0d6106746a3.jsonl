@@ -1,0 +1,1 @@
+{"type":"run_failed","sequence":1,"time":"2026-10-15T01:09:24.228Z","code":"invalid_inputs","snapshot":{"headings":["Member servicing","Member search"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing"},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"}],"rows":["Member ID"],"dialog":false,"loading":false}}

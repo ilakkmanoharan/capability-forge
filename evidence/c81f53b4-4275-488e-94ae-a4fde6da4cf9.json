@@ -1,0 +1,309 @@
+{
+  "runId": "c81f53b4-4275-488e-94ae-a4fde6da4cf9",
+  "mode": "discovery",
+  "started": "2026-10-15T01:28:17.361Z",
+  "finished": "2026-10-15T01:28:25.542Z",
+  "provider": "openai-responses",
+  "capabilitySource": "saved-discovery",
+  "providerReceipts": [
+    {
+      "requestId": "resp_05c888fd4db93b60016ad02c31c52887d1b0647fc2fc4b4c98",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 462,
+        "output_tokens": 37
+      }
+    },
+    {
+      "requestId": "resp_0ea1efaecf931f58016ad02c33e84887d19111e4104ecd1a18",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 422,
+        "output_tokens": 37
+      }
+    },
+    {
+      "requestId": "resp_064eafd590602638016ad02c354ce487d1966bce5d9810fb88",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 453,
+        "output_tokens": 37
+      }
+    },
+    {
+      "requestId": "resp_09e928a7a1032a83016ad02c360c6887d1bd21c83d2c236102",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 452,
+        "output_tokens": 37
+      }
+    },
+    {
+      "requestId": "resp_0659b658f38229c8016ad02c37999487d1b533fb52c3d68e8f",
+      "model": "gpt-4.1-mini-2025-04-14",
+      "usage": {
+        "input_tokens": 413,
+        "output_tokens": 20
+      }
+    }
+  ],
+  "capabilitySha256": "83acbc9480ac3b930f5e42caefa2eddf032c6a95c2c12a45b20f011e2cf5f310",
+  "result": {
+    "status": "success",
+    "modelCalls": 5,
+    "sessionId": "87de03c3-ea67-4d41-b7a8-0fdd7ad0ea42",
+    "outputFields": [
+      "accountType",
+      "balance",
+      "currency"
+    ],
+    "outputs": "[REDACTED]"
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:28:17.363Z",
+      "mode": "discovery",
+      "sessionId": "87de03c3-ea67-4d41-b7a8-0fdd7ad0ea42"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 2,
+      "time": "2026-10-15T01:28:17.364Z",
+      "stepId": "step-1",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": false
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "provider_receipt",
+      "sequence": 3,
+      "time": "2026-10-15T01:28:19.709Z"
+    },
+    {
+      "type": "model_decided",
+      "sequence": 4,
+      "time": "2026-10-15T01:28:19.710Z",
+      "stepId": "step-1",
+      "action": "fill",
+      "code": "enter_input"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 5,
+      "time": "2026-10-15T01:28:19.711Z",
+      "stepId": "step-2",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": true
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "provider_receipt",
+      "sequence": 6,
+      "time": "2026-10-15T01:28:21.129Z"
+    },
+    {
+      "type": "model_decided",
+      "sequence": 7,
+      "time": "2026-10-15T01:28:21.130Z",
+      "stepId": "step-2",
+      "action": "click",
+      "code": "open_result"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 8,
+      "time": "2026-10-15T01:28:21.132Z",
+      "stepId": "step-3",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search",
+          "Search results"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": true
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Open member",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID",
+          "Member ID",
+          "[REDACTED]"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "provider_receipt",
+      "sequence": 9,
+      "time": "2026-10-15T01:28:21.844Z"
+    },
+    {
+      "type": "model_decided",
+      "sequence": 10,
+      "time": "2026-10-15T01:28:21.844Z",
+      "stepId": "step-3",
+      "action": "click",
+      "code": "open_result"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 11,
+      "time": "2026-10-15T01:28:21.846Z",
+      "stepId": "step-4",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member detail"
+        ],
+        "controls": [
+          {
+            "strategy": "role",
+            "name": "Savings details",
+            "role": "button",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Checking details",
+            "role": "button",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Back to search",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "[REDACTED]",
+          "[REDACTED]"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "provider_receipt",
+      "sequence": 12,
+      "time": "2026-10-15T01:28:23.424Z"
+    },
+    {
+      "type": "model_decided",
+      "sequence": 13,
+      "time": "2026-10-15T01:28:23.424Z",
+      "stepId": "step-4",
+      "action": "click",
+      "code": "open_account"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 14,
+      "time": "2026-10-15T01:28:23.425Z",
+      "stepId": "step-5",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Account detail"
+        ],
+        "controls": [
+          {
+            "strategy": "role",
+            "name": "Back to member",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID",
+          "Account type",
+          "Current balance",
+          "Currency"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "provider_receipt",
+      "sequence": 15,
+      "time": "2026-10-15T01:28:25.531Z"
+    },
+    {
+      "type": "model_decided",
+      "sequence": 16,
+      "time": "2026-10-15T01:28:25.532Z",
+      "stepId": "step-5",
+      "action": "finish",
+      "code": "goal_complete"
+    },
+    {
+      "type": "run_succeeded",
+      "sequence": 17,
+      "time": "2026-10-15T01:28:25.534Z"
+    }
+  ]
+}

@@ -1,0 +1,194 @@
+{
+  "schemaVersion": "1.0",
+  "capabilityId": "member-account-balance",
+  "version": "1.0.0",
+  "description": "Read a member account balance through the servicing UI.",
+  "surfaceProfile": "forge-servicing-web@1",
+  "inputs": {
+    "memberId": {
+      "type": "string",
+      "sensitive": true,
+      "pattern": "^[0-9]{5}$"
+    },
+    "accountType": {
+      "type": "string",
+      "sensitive": false,
+      "pattern": "^(Savings|Checking)$"
+    }
+  },
+  "outputs": {
+    "accountType": {
+      "type": "string",
+      "sensitive": false,
+      "target": {
+        "frame": "servicing",
+        "strategy": "row",
+        "name": "Account type"
+      },
+      "pattern": "^(Savings|Checking)$"
+    },
+    "balance": {
+      "type": "string",
+      "sensitive": true,
+      "target": {
+        "frame": "servicing",
+        "strategy": "row",
+        "name": "Current balance"
+      },
+      "pattern": "^[0-9]+\\.[0-9]{2}$"
+    },
+    "currency": {
+      "type": "string",
+      "sensitive": false,
+      "target": {
+        "frame": "servicing",
+        "strategy": "row",
+        "name": "Currency"
+      },
+      "pattern": "^USD$"
+    }
+  },
+  "steps": [
+    {
+      "id": "step-1",
+      "action": "fill",
+      "target": {
+        "frame": "servicing",
+        "strategy": "label",
+        "name": "Member ID"
+      },
+      "value": {
+        "parameter": "memberId"
+      },
+      "checkpoint": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Member search"
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "step-2",
+      "action": "click",
+      "target": {
+        "frame": "servicing",
+        "strategy": "role",
+        "name": "Search members",
+        "role": "button"
+      },
+      "checkpoint": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Search results"
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "step-3",
+      "action": "click",
+      "target": {
+        "frame": "servicing",
+        "strategy": "role",
+        "name": "Open member",
+        "role": "button"
+      },
+      "checkpoint": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Member detail"
+        }
+      },
+      "timeoutMs": 5000
+    },
+    {
+      "id": "step-4",
+      "action": "click",
+      "target": {
+        "frame": "servicing",
+        "strategy": "role",
+        "name": "{{accountType}} details",
+        "role": "button"
+      },
+      "checkpoint": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Account detail"
+        }
+      },
+      "timeoutMs": 5000
+    }
+  ],
+  "success": [
+    {
+      "kind": "visible",
+      "target": {
+        "frame": "servicing",
+        "strategy": "role",
+        "role": "heading",
+        "name": "Account detail"
+      }
+    },
+    {
+      "kind": "equals",
+      "target": {
+        "frame": "servicing",
+        "strategy": "row",
+        "name": "Member ID"
+      },
+      "value": {
+        "parameter": "memberId"
+      }
+    },
+    {
+      "kind": "equals",
+      "target": {
+        "frame": "servicing",
+        "strategy": "row",
+        "name": "Account type"
+      },
+      "value": {
+        "parameter": "accountType"
+      }
+    }
+  ],
+  "outcomes": [
+    {
+      "code": "member_not_found",
+      "when": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Member not found"
+        }
+      }
+    },
+    {
+      "code": "validation_error",
+      "when": {
+        "kind": "visible",
+        "target": {
+          "frame": "servicing",
+          "strategy": "role",
+          "role": "heading",
+          "name": "Validation error"
+        }
+      }
+    }
+  ]
+}

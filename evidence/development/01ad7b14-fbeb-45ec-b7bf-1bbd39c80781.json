@@ -1,0 +1,91 @@
+{
+  "runId": "01ad7b14-fbeb-45ec-b7bf-1bbd39c80781",
+  "mode": "replay",
+  "started": "2026-10-15T01:08:07.708Z",
+  "finished": "2026-10-15T01:08:07.719Z",
+  "provider": "none",
+  "capabilitySource": "development-fixture",
+  "providerReceipts": [],
+  "capabilitySha256": null,
+  "result": {
+    "status": "success",
+    "modelCalls": 0,
+    "sessionId": "fec14e53-16f1-4363-a664-91675a119465",
+    "outputFields": [
+      "accountType",
+      "balance",
+      "currency"
+    ],
+    "outputs": "[REDACTED]"
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:08:07.710Z",
+      "mode": "replay",
+      "sessionId": "fec14e53-16f1-4363-a664-91675a119465"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:08:07.710Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:08:07.711Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:08:07.711Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 5,
+      "time": "2026-10-15T01:08:07.712Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 6,
+      "time": "2026-10-15T01:08:07.712Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 7,
+      "time": "2026-10-15T01:08:07.713Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 8,
+      "time": "2026-10-15T01:08:07.713Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 9,
+      "time": "2026-10-15T01:08:07.713Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "run_succeeded",
+      "sequence": 10,
+      "time": "2026-10-15T01:08:07.713Z"
+    }
+  ]
+}

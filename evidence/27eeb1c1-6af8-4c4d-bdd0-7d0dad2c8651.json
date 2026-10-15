@@ -1,0 +1,159 @@
+{
+  "runId": "27eeb1c1-6af8-4c4d-bdd0-7d0dad2c8651",
+  "mode": "replay",
+  "started": "2026-10-15T01:29:31.893Z",
+  "finished": "2026-10-15T01:29:44.236Z",
+  "provider": "none",
+  "capabilitySource": "saved-discovery",
+  "providerReceipts": [],
+  "capabilitySha256": "83acbc9480ac3b930f5e42caefa2eddf032c6a95c2c12a45b20f011e2cf5f310",
+  "result": {
+    "status": "success",
+    "modelCalls": 0,
+    "sessionId": "6870908b-931d-4a44-b15a-28af5313ac26",
+    "outputFields": [
+      "accountType",
+      "balance",
+      "currency"
+    ],
+    "outputs": "[REDACTED]"
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:29:31.894Z",
+      "mode": "replay",
+      "sessionId": "6870908b-931d-4a44-b15a-28af5313ac26"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:29:31.894Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:29:31.895Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:29:31.895Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "intervention_requested",
+      "sequence": 5,
+      "time": "2026-10-15T01:29:31.895Z",
+      "stepId": "step-2",
+      "code": "session_expired",
+      "sessionId": "6870908b-931d-4a44-b15a-28af5313ac26",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search",
+          "Session expired"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": true
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Restore demo session",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "human_claimed",
+      "sequence": 6,
+      "time": "2026-10-15T01:29:38.244Z",
+      "epoch": 2
+    },
+    {
+      "type": "human_action",
+      "sequence": 7,
+      "time": "2026-10-15T01:29:41.227Z",
+      "action": "click",
+      "sessionId": "6870908b-931d-4a44-b15a-28af5313ac26",
+      "target": "Restore demo session",
+      "trustedInput": true
+    },
+    {
+      "type": "automation_resumed",
+      "sequence": 8,
+      "time": "2026-10-15T01:29:44.210Z",
+      "epoch": 4
+    },
+    {
+      "type": "recovery_completed",
+      "sequence": 9,
+      "time": "2026-10-15T01:29:44.234Z",
+      "stepId": "step-2",
+      "code": "session_restored"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 10,
+      "time": "2026-10-15T01:29:44.234Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 11,
+      "time": "2026-10-15T01:29:44.234Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 12,
+      "time": "2026-10-15T01:29:44.234Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 13,
+      "time": "2026-10-15T01:29:44.234Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 14,
+      "time": "2026-10-15T01:29:44.235Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "run_succeeded",
+      "sequence": 15,
+      "time": "2026-10-15T01:29:44.235Z"
+    }
+  ]
+}

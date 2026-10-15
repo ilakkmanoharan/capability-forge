@@ -1,0 +1,53 @@
+{
+  "transport": "Codex computer-use",
+  "capabilitySource": "saved-discovery",
+  "checks": [
+    {
+      "scenario": "normal",
+      "status": "business_outcome",
+      "code": "member_not_found",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "normal",
+      "status": "failure",
+      "code": "invalid_inputs",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "permission",
+      "status": "failure",
+      "code": "permission_denied",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "app-error",
+      "status": "failure",
+      "code": "app_error",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "known",
+      "status": "success",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "ambiguous",
+      "status": "failure",
+      "code": "target_ambiguous",
+      "modelCalls": 0,
+      "passed": true
+    },
+    {
+      "scenario": "slow",
+      "status": "success",
+      "modelCalls": 0,
+      "passed": true
+    }
+  ]
+}

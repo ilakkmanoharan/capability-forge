@@ -1,0 +1,103 @@
+{
+  "runId": "733c766c-7a32-4a10-8810-1d57fa89c9ba",
+  "mode": "replay",
+  "started": "2026-10-15T01:09:30.359Z",
+  "finished": "2026-10-15T01:09:30.361Z",
+  "provider": "none",
+  "capabilitySource": "development-fixture",
+  "providerReceipts": [],
+  "capabilitySha256": null,
+  "result": {
+    "status": "failure",
+    "modelCalls": 0,
+    "code": "app_error",
+    "sessionId": "047f0776-ac93-4a3a-bd9e-df487ef7743b",
+    "observed": {
+      "headings": [
+        "Member servicing",
+        "Member search",
+        "App error"
+      ],
+      "controls": [
+        {
+          "strategy": "label",
+          "name": "Member ID",
+          "frame": "servicing"
+        },
+        {
+          "strategy": "role",
+          "name": "Search members",
+          "role": "button",
+          "frame": "servicing"
+        }
+      ],
+      "rows": [
+        "Member ID"
+      ],
+      "dialog": false,
+      "loading": false
+    }
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:09:30.359Z",
+      "mode": "replay",
+      "sessionId": "047f0776-ac93-4a3a-bd9e-df487ef7743b"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:09:30.360Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:09:30.360Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:09:30.360Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "run_failed",
+      "sequence": 5,
+      "time": "2026-10-15T01:09:30.360Z",
+      "stepId": "step-2",
+      "code": "app_error",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search",
+          "App error"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    }
+  ]
+}

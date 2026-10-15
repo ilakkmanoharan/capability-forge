@@ -1,0 +1,52 @@
+{
+  "runId": "d91d690d-aeed-4ec3-bda0-f9d841e751e6",
+  "mode": "replay",
+  "started": "2026-10-15T01:09:06.525Z",
+  "finished": "2026-10-15T01:09:06.528Z",
+  "provider": "none",
+  "capabilitySource": "development-fixture",
+  "providerReceipts": [],
+  "capabilitySha256": null,
+  "result": {
+    "status": "business_outcome",
+    "modelCalls": 0,
+    "code": "member_not_found",
+    "sessionId": "60bfd68d-761c-49bd-95ff-00a3d174c5cb"
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:09:06.526Z",
+      "mode": "replay",
+      "sessionId": "60bfd68d-761c-49bd-95ff-00a3d174c5cb"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:09:06.527Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:09:06.527Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:09:06.527Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "business_outcome",
+      "sequence": 5,
+      "time": "2026-10-15T01:09:06.527Z",
+      "code": "member_not_found"
+    }
+  ]
+}

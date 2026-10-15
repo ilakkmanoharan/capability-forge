@@ -1,0 +1,15 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:08:16.493Z","mode":"replay","sessionId":"e66068ef-3255-4deb-82ec-de67488b28d3"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:08:16.494Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:08:16.494Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:08:16.494Z","stepId":"step-2","action":"click"}
+{"type":"intervention_requested","sequence":5,"time":"2026-10-15T01:08:16.495Z","stepId":"step-2","code":"session_expired","sessionId":"e66068ef-3255-4deb-82ec-de67488b28d3","snapshot":{"headings":["Member servicing","Member search","Session expired"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing"},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"},{"strategy":"role","name":"Restore demo session","role":"button","frame":"servicing"}],"rows":["Member ID"],"dialog":false,"loading":false}}
+{"type":"human_claimed","sequence":6,"time":"2026-10-15T01:08:25.118Z","epoch":2}
+{"type":"human_action","sequence":7,"time":"2026-10-15T01:08:27.693Z","action":"click","sessionId":"e66068ef-3255-4deb-82ec-de67488b28d3","target":"Restore demo session"}
+{"type":"automation_resumed","sequence":8,"time":"2026-10-15T01:08:30.608Z","epoch":4}
+{"type":"recovery_completed","sequence":9,"time":"2026-10-15T01:08:30.655Z","stepId":"step-2","code":"session_restored"}
+{"type":"step_completed","sequence":10,"time":"2026-10-15T01:08:30.655Z","stepId":"step-2","action":"click"}
+{"type":"step_started","sequence":11,"time":"2026-10-15T01:08:30.656Z","stepId":"step-3","action":"click"}
+{"type":"step_completed","sequence":12,"time":"2026-10-15T01:08:30.656Z","stepId":"step-3","action":"click"}
+{"type":"step_started","sequence":13,"time":"2026-10-15T01:08:30.656Z","stepId":"step-4","action":"click"}
+{"type":"step_completed","sequence":14,"time":"2026-10-15T01:08:30.656Z","stepId":"step-4","action":"click"}
+{"type":"run_succeeded","sequence":15,"time":"2026-10-15T01:08:30.657Z"}

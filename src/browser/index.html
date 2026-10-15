@@ -1,0 +1,17 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>capability-forge | Discovery and replay</title><link rel="stylesheet" href="/app.css"></head><body>
+<header><div><span class="eyebrow">COMPUTER-USE AUTOMATION</span><h1>capability-forge</h1><p>Discover through a live UI. Save the capability. Replay without a model.</p></div><span id="provider" class="status">Checking model access…</span></header>
+<main class="workspace"><section class="console"><h2>Run a capability</h2>
+<label for="goal">Discovery goal</label><textarea id="goal" rows="3">Look up the supplied member and read the current balance of the supplied account type.</textarea>
+<div class="fields"><div><label for="member-id">Member ID</label><input id="member-id" value="10001" pattern="[0-9]{5}" maxlength="5"></div><div><label for="account-type">Account type</label><select id="account-type"><option>Savings</option><option>Checking</option></select></div></div>
+<label for="run-scenario">Runtime scenario</label><select id="run-scenario"><option value="normal">Normal</option><option value="slow">Slow load</option><option value="permission">Permission denied</option><option value="expired">Session expired</option><option value="dialog">Unexpected dialog</option><option value="known">Known interstitial</option><option value="app-error">Application error</option><option value="ambiguous">Ambiguous target</option></select>
+<div class="actions"><button id="discover">Discover with live LLM</button><button id="replay" class="secondary" disabled>Replay saved capability</button></div>
+<button id="load-fixture" class="link">Load development fixture (no model discovery)</button><br><button id="policy-probe" class="link">Demonstrate blocked risky action</button>
+<p class="hint">Discovery uses a real model. Replay never requests one. Member IDs and balances stay out of saved evidence.</p>
+<div id="run-state" role="status">Ready. Discover a workflow or load the saved capability.</div>
+<section id="handoff" hidden><h3>Human intervention requested</h3><p id="handoff-reason"></p><p>Claim control, work in the live browser on the right, then resume. The session ID must remain unchanged.</p><button id="claim">Take control of live session</button><button id="resume" disabled>Resume automation</button></section>
+<button id="cancel" class="link" hidden>Cancel run</button>
+<h3>Result</h3><pre id="result">No run yet.</pre><h3>Evidence timeline</h3><ol id="timeline"></ol>
+<details><summary>Saved capability JSON</summary><pre id="artifact">No capability yet.</pre></details>
+<p><a href="/api/capability" target="_blank">Capability JSON</a> · <a href="/api/runs" target="_blank">Saved run evidence</a></p>
+</section><section class="live"><div class="live-header"><div><h2>Live servicing session</h2><p id="session-label">The same frame remains open throughout takeover and resume.</p></div><span id="owner">Owner: none</span></div><div class="frame-wrap"><iframe name="servicing" title="Live banking sandbox" src="/desk"></iframe><div id="shield" hidden>Automation owns this session. Controls unlock after human takeover.</div></div><p class="hint">All records are fictional. The automation only reads visible controls and account rows.</p></section></main>
+<script type="module" src="/src/browser/app.ts"></script></body></html>

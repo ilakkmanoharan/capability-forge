@@ -1,0 +1,105 @@
+{
+  "runId": "f34cceb8-7aaf-454b-95d1-46a2d6f4372d",
+  "mode": "replay",
+  "started": "2026-10-15T01:29:11.828Z",
+  "finished": "2026-10-15T01:29:11.831Z",
+  "provider": "none",
+  "capabilitySource": "saved-discovery",
+  "providerReceipts": [],
+  "capabilitySha256": "83acbc9480ac3b930f5e42caefa2eddf032c6a95c2c12a45b20f011e2cf5f310",
+  "result": {
+    "status": "failure",
+    "modelCalls": 0,
+    "code": "permission_denied",
+    "sessionId": "5f381cd0-5bb4-48c1-9e80-6dd23189e8fc",
+    "observed": {
+      "headings": [
+        "Member servicing",
+        "Member search",
+        "Permission denied"
+      ],
+      "controls": [
+        {
+          "strategy": "label",
+          "name": "Member ID",
+          "frame": "servicing",
+          "filled": true
+        },
+        {
+          "strategy": "role",
+          "name": "Search members",
+          "role": "button",
+          "frame": "servicing"
+        }
+      ],
+      "rows": [
+        "Member ID"
+      ],
+      "dialog": false,
+      "loading": false
+    }
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:29:11.829Z",
+      "mode": "replay",
+      "sessionId": "5f381cd0-5bb4-48c1-9e80-6dd23189e8fc"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:29:11.829Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:29:11.829Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:29:11.830Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "run_failed",
+      "sequence": 5,
+      "time": "2026-10-15T01:29:11.830Z",
+      "stepId": "step-2",
+      "code": "permission_denied",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search",
+          "Permission denied"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": true
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    }
+  ]
+}

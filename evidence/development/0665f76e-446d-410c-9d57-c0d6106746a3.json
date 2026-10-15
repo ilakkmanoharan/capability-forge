@@ -1,0 +1,72 @@
+{
+  "runId": "0665f76e-446d-410c-9d57-c0d6106746a3",
+  "mode": "replay",
+  "started": "2026-10-15T01:09:24.226Z",
+  "finished": "2026-10-15T01:09:24.229Z",
+  "provider": "none",
+  "capabilitySource": "development-fixture",
+  "providerReceipts": [],
+  "capabilitySha256": null,
+  "result": {
+    "status": "failure",
+    "modelCalls": 0,
+    "code": "invalid_inputs",
+    "sessionId": "2530a60c-9446-4a3e-baee-35d04643e098",
+    "observed": {
+      "headings": [
+        "Member servicing",
+        "Member search"
+      ],
+      "controls": [
+        {
+          "strategy": "label",
+          "name": "Member ID",
+          "frame": "servicing"
+        },
+        {
+          "strategy": "role",
+          "name": "Search members",
+          "role": "button",
+          "frame": "servicing"
+        }
+      ],
+      "rows": [
+        "Member ID"
+      ],
+      "dialog": false,
+      "loading": false
+    }
+  },
+  "events": [
+    {
+      "type": "run_failed",
+      "sequence": 1,
+      "time": "2026-10-15T01:09:24.228Z",
+      "code": "invalid_inputs",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing"
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    }
+  ]
+}

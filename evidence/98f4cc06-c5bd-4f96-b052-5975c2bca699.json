@@ -1,0 +1,98 @@
+{
+  "runId": "98f4cc06-c5bd-4f96-b052-5975c2bca699",
+  "mode": "replay",
+  "started": "2026-10-15T01:29:17.976Z",
+  "finished": "2026-10-15T01:29:17.980Z",
+  "provider": "none",
+  "capabilitySource": "saved-discovery",
+  "providerReceipts": [],
+  "capabilitySha256": "83acbc9480ac3b930f5e42caefa2eddf032c6a95c2c12a45b20f011e2cf5f310",
+  "result": {
+    "status": "success",
+    "modelCalls": 0,
+    "sessionId": "e04c2d9f-0514-4dc1-86e6-ee9c3d327ec6",
+    "outputFields": [
+      "accountType",
+      "balance",
+      "currency"
+    ],
+    "outputs": "[REDACTED]"
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:29:17.977Z",
+      "mode": "replay",
+      "sessionId": "e04c2d9f-0514-4dc1-86e6-ee9c3d327ec6"
+    },
+    {
+      "type": "step_started",
+      "sequence": 2,
+      "time": "2026-10-15T01:29:17.978Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 3,
+      "time": "2026-10-15T01:29:17.978Z",
+      "stepId": "step-1",
+      "action": "fill"
+    },
+    {
+      "type": "step_started",
+      "sequence": 4,
+      "time": "2026-10-15T01:29:17.978Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "recovery_completed",
+      "sequence": 5,
+      "time": "2026-10-15T01:29:17.979Z",
+      "stepId": "step-2",
+      "code": "known_interstitial"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 6,
+      "time": "2026-10-15T01:29:17.979Z",
+      "stepId": "step-2",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 7,
+      "time": "2026-10-15T01:29:17.979Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 8,
+      "time": "2026-10-15T01:29:17.979Z",
+      "stepId": "step-3",
+      "action": "click"
+    },
+    {
+      "type": "step_started",
+      "sequence": 9,
+      "time": "2026-10-15T01:29:17.979Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "step_completed",
+      "sequence": 10,
+      "time": "2026-10-15T01:29:17.980Z",
+      "stepId": "step-4",
+      "action": "click"
+    },
+    {
+      "type": "run_succeeded",
+      "sequence": 11,
+      "time": "2026-10-15T01:29:17.980Z"
+    }
+  ]
+}

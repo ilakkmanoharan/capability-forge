@@ -1,0 +1,10 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:28:51.195Z","mode":"replay","sessionId":"344437e3-d9f3-451c-be05-a0527670cd55"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:28:51.195Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:28:51.196Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:28:51.196Z","stepId":"step-2","action":"click"}
+{"type":"step_completed","sequence":5,"time":"2026-10-15T01:28:51.196Z","stepId":"step-2","action":"click"}
+{"type":"step_started","sequence":6,"time":"2026-10-15T01:28:51.196Z","stepId":"step-3","action":"click"}
+{"type":"step_completed","sequence":7,"time":"2026-10-15T01:28:51.197Z","stepId":"step-3","action":"click"}
+{"type":"step_started","sequence":8,"time":"2026-10-15T01:28:51.197Z","stepId":"step-4","action":"click"}
+{"type":"step_completed","sequence":9,"time":"2026-10-15T01:28:51.197Z","stepId":"step-4","action":"click"}
+{"type":"run_succeeded","sequence":10,"time":"2026-10-15T01:28:51.197Z"}

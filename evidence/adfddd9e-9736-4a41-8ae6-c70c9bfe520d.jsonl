@@ -1,0 +1,5 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:29:14.911Z","mode":"replay","sessionId":"380168fb-1697-4bce-8358-168a099de5f6"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:29:14.912Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:29:14.912Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:29:14.912Z","stepId":"step-2","action":"click"}
+{"type":"run_failed","sequence":5,"time":"2026-10-15T01:29:14.913Z","stepId":"step-2","code":"app_error","snapshot":{"headings":["Member servicing","Member search","App error"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing","filled":true},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"}],"rows":["Member ID"],"dialog":false,"loading":false}}

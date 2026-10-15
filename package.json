@@ -1,0 +1,21 @@
+{
+  "name": "capability-forge",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "demo:app": "node src/demo/server.ts",
+    "test": "node --test tests/unit/*.test.ts tests/bdd/*.test.ts tests/integration/*.test.ts",
+    "test:unit": "node --test tests/unit/*.test.ts",
+    "test:bdd": "node --test tests/bdd/*.test.ts",
+    "test:coverage": "node --experimental-test-coverage --test tests/unit/*.test.ts tests/bdd/*.test.ts tests/integration/*.test.ts",
+    "start": "node src/server/server.ts",
+    "test:integration": "node --test tests/integration/*.test.ts",
+    "discover": "node scripts/run.ts discover",
+    "replay": "node scripts/run.ts replay",
+    "audit": "node scripts/audit.ts"
+  }
+}

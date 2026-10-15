@@ -1,0 +1,5 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:29:11.829Z","mode":"replay","sessionId":"5f381cd0-5bb4-48c1-9e80-6dd23189e8fc"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:29:11.829Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:29:11.829Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:29:11.830Z","stepId":"step-2","action":"click"}
+{"type":"run_failed","sequence":5,"time":"2026-10-15T01:29:11.830Z","stepId":"step-2","code":"permission_denied","snapshot":{"headings":["Member servicing","Member search","Permission denied"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing","filled":true},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"}],"rows":["Member ID"],"dialog":false,"loading":false}}

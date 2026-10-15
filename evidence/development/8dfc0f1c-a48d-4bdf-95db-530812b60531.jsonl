@@ -1,0 +1,13 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:10:21.028Z","mode":"replay","sessionId":"ac6171a5-5353-43e5-9e3f-f452b83a79bc"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:10:21.028Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:10:21.028Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:10:21.028Z","stepId":"step-2","action":"click"}
+{"type":"intervention_requested","sequence":5,"time":"2026-10-15T01:10:21.029Z","stepId":"step-2","code":"unexpected_dialog","sessionId":"ac6171a5-5353-43e5-9e3f-f452b83a79bc","snapshot":{"headings":["Member servicing","Member search","Search results","[REDACTED]"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing"},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"},{"strategy":"role","name":"Open member","role":"button","frame":"servicing"},{"strategy":"role","name":"Dismiss notice","role":"button","frame":"servicing"}],"rows":["Member ID","Member ID","[REDACTED]"],"dialog":true,"loading":false}}
+{"type":"human_claimed","sequence":6,"time":"2026-10-15T01:10:28.212Z","epoch":2}
+{"type":"automation_resumed","sequence":7,"time":"2026-10-15T01:10:36.207Z","epoch":4}
+{"type":"step_completed","sequence":8,"time":"2026-10-15T01:10:36.291Z","stepId":"step-2","action":"click"}
+{"type":"step_started","sequence":9,"time":"2026-10-15T01:10:36.291Z","stepId":"step-3","action":"click"}
+{"type":"step_completed","sequence":10,"time":"2026-10-15T01:10:36.292Z","stepId":"step-3","action":"click"}
+{"type":"step_started","sequence":11,"time":"2026-10-15T01:10:36.292Z","stepId":"step-4","action":"click"}
+{"type":"step_completed","sequence":12,"time":"2026-10-15T01:10:36.292Z","stepId":"step-4","action":"click"}
+{"type":"run_succeeded","sequence":13,"time":"2026-10-15T01:10:36.293Z"}

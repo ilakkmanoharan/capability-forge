@@ -1,0 +1,7 @@
+{"type":"run_started","sequence":1,"time":"2026-10-15T01:09:36.494Z","mode":"replay","sessionId":"7e5f9e1e-7c93-4c07-8583-c176252eb136"}
+{"type":"step_started","sequence":2,"time":"2026-10-15T01:09:36.495Z","stepId":"step-1","action":"fill"}
+{"type":"step_completed","sequence":3,"time":"2026-10-15T01:09:36.495Z","stepId":"step-1","action":"fill"}
+{"type":"step_started","sequence":4,"time":"2026-10-15T01:09:36.495Z","stepId":"step-2","action":"click"}
+{"type":"step_completed","sequence":5,"time":"2026-10-15T01:09:36.496Z","stepId":"step-2","action":"click"}
+{"type":"step_started","sequence":6,"time":"2026-10-15T01:09:36.496Z","stepId":"step-3","action":"click"}
+{"type":"run_failed","sequence":7,"time":"2026-10-15T01:09:36.496Z","stepId":"step-3","code":"target_ambiguous","snapshot":{"headings":["Member servicing","Member search","Search results"],"controls":[{"strategy":"label","name":"Member ID","frame":"servicing"},{"strategy":"role","name":"Search members","role":"button","frame":"servicing"},{"strategy":"role","name":"Open member","role":"button","frame":"servicing"},{"strategy":"role","name":"Open member","role":"button","frame":"servicing"}],"rows":["Member ID","Member ID","[REDACTED]"],"dialog":false,"loading":false}}

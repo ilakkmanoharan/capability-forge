@@ -1,0 +1,113 @@
+{
+  "runId": "5ee222cf-eab8-4f8f-9fbe-ef923ce5e45b",
+  "mode": "discovery",
+  "started": "2026-10-15T01:11:09.560Z",
+  "finished": "2026-10-15T01:11:14.900Z",
+  "provider": "openai-responses",
+  "capabilitySource": "saved-discovery",
+  "providerReceipts": [],
+  "capabilitySha256": null,
+  "result": {
+    "status": "failure",
+    "modelCalls": 1,
+    "code": "model_quota_exhausted",
+    "sessionId": "d73654d1-497a-420f-a188-9a6c22a809eb",
+    "observed": {
+      "headings": [
+        "Member servicing",
+        "Member search"
+      ],
+      "controls": [
+        {
+          "strategy": "label",
+          "name": "Member ID",
+          "frame": "servicing",
+          "filled": false
+        },
+        {
+          "strategy": "role",
+          "name": "Search members",
+          "role": "button",
+          "frame": "servicing"
+        }
+      ],
+      "rows": [
+        "Member ID"
+      ],
+      "dialog": false,
+      "loading": false
+    }
+  },
+  "events": [
+    {
+      "type": "run_started",
+      "sequence": 1,
+      "time": "2026-10-15T01:11:09.561Z",
+      "mode": "discovery",
+      "sessionId": "d73654d1-497a-420f-a188-9a6c22a809eb"
+    },
+    {
+      "type": "model_requested",
+      "sequence": 2,
+      "time": "2026-10-15T01:11:09.562Z",
+      "stepId": "step-1",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": false
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    },
+    {
+      "type": "run_failed",
+      "sequence": 3,
+      "time": "2026-10-15T01:11:14.897Z",
+      "stepId": "step-1",
+      "code": "model_quota_exhausted",
+      "snapshot": {
+        "headings": [
+          "Member servicing",
+          "Member search"
+        ],
+        "controls": [
+          {
+            "strategy": "label",
+            "name": "Member ID",
+            "frame": "servicing",
+            "filled": false
+          },
+          {
+            "strategy": "role",
+            "name": "Search members",
+            "role": "button",
+            "frame": "servicing"
+          }
+        ],
+        "rows": [
+          "Member ID"
+        ],
+        "dialog": false,
+        "loading": false
+      }
+    }
+  ]
+}

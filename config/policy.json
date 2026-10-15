@@ -1,0 +1,31 @@
+{
+  "allowedOrigins": [
+    "http://127.0.0.1:4317"
+  ],
+  "allowedPaths": [
+    "/desk"
+  ],
+  "actions": [
+    "fill",
+    "click",
+    "read"
+  ],
+  "fillLabels": [
+    "Member ID"
+  ],
+  "clickNames": [
+    "Search members",
+    "Open member",
+    "Savings details",
+    "Checking details",
+    "Back to search",
+    "Back to member",
+    "Acknowledge service notice"
+  ],
+  "readRows": [
+    "Member ID",
+    "Account type",
+    "Current balance",
+    "Currency"
+  ]
+}

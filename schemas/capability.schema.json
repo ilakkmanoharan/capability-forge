@@ -1,0 +1,582 @@
+{
+  "type": "object",
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "capabilityId": {
+      "const": "member-account-balance"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "description": {
+      "const": "Read a member account balance through the servicing UI."
+    },
+    "surfaceProfile": {
+      "const": "forge-servicing-web@1"
+    },
+    "inputs": {
+      "type": "object",
+      "properties": {
+        "memberId": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "type",
+            "sensitive",
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "accountType": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "type",
+            "sensitive",
+            "pattern"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "memberId",
+        "accountType"
+      ],
+      "additionalProperties": false
+    },
+    "outputs": {
+      "type": "object",
+      "properties": {
+        "accountType": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "target": {
+              "type": "object",
+              "properties": {
+                "frame": {
+                  "const": "servicing"
+                },
+                "strategy": {
+                  "enum": [
+                    "label",
+                    "role",
+                    "row"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "role": {
+                  "enum": [
+                    "button",
+                    "heading",
+                    "textbox",
+                    "cell"
+                  ]
+                }
+              },
+              "required": [
+                "frame",
+                "strategy",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "type",
+            "sensitive",
+            "target",
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "balance": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "target": {
+              "type": "object",
+              "properties": {
+                "frame": {
+                  "const": "servicing"
+                },
+                "strategy": {
+                  "enum": [
+                    "label",
+                    "role",
+                    "row"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "role": {
+                  "enum": [
+                    "button",
+                    "heading",
+                    "textbox",
+                    "cell"
+                  ]
+                }
+              },
+              "required": [
+                "frame",
+                "strategy",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "type",
+            "sensitive",
+            "target",
+            "pattern"
+          ],
+          "additionalProperties": false
+        },
+        "currency": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "const": "string"
+            },
+            "sensitive": {
+              "type": "boolean"
+            },
+            "target": {
+              "type": "object",
+              "properties": {
+                "frame": {
+                  "const": "servicing"
+                },
+                "strategy": {
+                  "enum": [
+                    "label",
+                    "role",
+                    "row"
+                  ]
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1,
+                  "maxLength": 160
+                },
+                "role": {
+                  "enum": [
+                    "button",
+                    "heading",
+                    "textbox",
+                    "cell"
+                  ]
+                }
+              },
+              "required": [
+                "frame",
+                "strategy",
+                "name"
+              ],
+              "additionalProperties": false
+            },
+            "pattern": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 160
+            }
+          },
+          "required": [
+            "type",
+            "sensitive",
+            "target",
+            "pattern"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "accountType",
+        "balance",
+        "currency"
+      ],
+      "additionalProperties": false
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^step-[0-9]+$"
+          },
+          "action": {
+            "enum": [
+              "fill",
+              "click"
+            ]
+          },
+          "target": {
+            "type": "object",
+            "properties": {
+              "frame": {
+                "const": "servicing"
+              },
+              "strategy": {
+                "enum": [
+                  "label",
+                  "role",
+                  "row"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "role": {
+                "enum": [
+                  "button",
+                  "heading",
+                  "textbox",
+                  "cell"
+                ]
+              }
+            },
+            "required": [
+              "frame",
+              "strategy",
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          "value": {
+            "type": "object",
+            "properties": {
+              "parameter": {
+                "enum": [
+                  "memberId",
+                  "accountType"
+                ]
+              }
+            },
+            "required": [
+              "parameter"
+            ],
+            "additionalProperties": false
+          },
+          "checkpoint": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "visible",
+                  "equals"
+                ]
+              },
+              "target": {
+                "type": "object",
+                "properties": {
+                  "frame": {
+                    "const": "servicing"
+                  },
+                  "strategy": {
+                    "enum": [
+                      "label",
+                      "role",
+                      "row"
+                    ]
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "role": {
+                    "enum": [
+                      "button",
+                      "heading",
+                      "textbox",
+                      "cell"
+                    ]
+                  }
+                },
+                "required": [
+                  "frame",
+                  "strategy",
+                  "name"
+                ],
+                "additionalProperties": false
+              },
+              "value": {
+                "type": "object",
+                "properties": {
+                  "parameter": {
+                    "enum": [
+                      "memberId",
+                      "accountType"
+                    ]
+                  },
+                  "literal": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "kind",
+              "target"
+            ],
+            "additionalProperties": false
+          },
+          "timeoutMs": {
+            "type": "integer",
+            "minimum": 100,
+            "maximum": 10000
+          }
+        },
+        "required": [
+          "id",
+          "action",
+          "target",
+          "checkpoint",
+          "timeoutMs"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1,
+      "maxItems": 20
+    },
+    "success": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "kind": {
+            "enum": [
+              "visible",
+              "equals"
+            ]
+          },
+          "target": {
+            "type": "object",
+            "properties": {
+              "frame": {
+                "const": "servicing"
+              },
+              "strategy": {
+                "enum": [
+                  "label",
+                  "role",
+                  "row"
+                ]
+              },
+              "name": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              },
+              "role": {
+                "enum": [
+                  "button",
+                  "heading",
+                  "textbox",
+                  "cell"
+                ]
+              }
+            },
+            "required": [
+              "frame",
+              "strategy",
+              "name"
+            ],
+            "additionalProperties": false
+          },
+          "value": {
+            "type": "object",
+            "properties": {
+              "parameter": {
+                "enum": [
+                  "memberId",
+                  "accountType"
+                ]
+              },
+              "literal": {
+                "type": "string",
+                "minLength": 1,
+                "maxLength": 160
+              }
+            },
+            "required": [],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "kind",
+          "target"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 2,
+      "maxItems": 5
+    },
+    "outcomes": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "code": {
+            "enum": [
+              "member_not_found",
+              "validation_error"
+            ]
+          },
+          "when": {
+            "type": "object",
+            "properties": {
+              "kind": {
+                "enum": [
+                  "visible",
+                  "equals"
+                ]
+              },
+              "target": {
+                "type": "object",
+                "properties": {
+                  "frame": {
+                    "const": "servicing"
+                  },
+                  "strategy": {
+                    "enum": [
+                      "label",
+                      "role",
+                      "row"
+                    ]
+                  },
+                  "name": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  },
+                  "role": {
+                    "enum": [
+                      "button",
+                      "heading",
+                      "textbox",
+                      "cell"
+                    ]
+                  }
+                },
+                "required": [
+                  "frame",
+                  "strategy",
+                  "name"
+                ],
+                "additionalProperties": false
+              },
+              "value": {
+                "type": "object",
+                "properties": {
+                  "parameter": {
+                    "enum": [
+                      "memberId",
+                      "accountType"
+                    ]
+                  },
+                  "literal": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 160
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            },
+            "required": [
+              "kind",
+              "target"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "required": [
+          "code",
+          "when"
+        ],
+        "additionalProperties": false
+      },
+      "maxItems": 4
+    }
+  },
+  "required": [
+    "schemaVersion",
+    "capabilityId",
+    "version",
+    "description",
+    "surfaceProfile",
+    "inputs",
+    "outputs",
+    "steps",
+    "success",
+    "outcomes"
+  ],
+  "additionalProperties": false,
+  "$schema": "https://json-schema.org/draft/2020-12/schema"
+}
