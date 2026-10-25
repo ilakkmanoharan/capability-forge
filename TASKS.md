@@ -17,8 +17,8 @@
 
 ## Review before external submission
 - [ ] User reviews and can defend the implementation
-- [ ] Publish the reviewed repository publicly
-- [ ] Email the repository link from the application address
+- [x] Publish the reviewed repository publicly
+- [x] Email the repository link from the application address
 
 ## Deliberate extensions
 - [ ] Compiler checking across all runtime modules
